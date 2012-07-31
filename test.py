@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import spmda.entity
 import spmda.message_handler
 import spmda.world
