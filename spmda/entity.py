@@ -114,14 +114,16 @@ class controller:
         if not listener.listener_id in self.listeners:
             self.listeners[listener.listener_id] = listener
         
-class entity:
+class entity(object):
+    self.entity_id = ""
+    message_in = []
+    message_out = []
+    controllers = {}
+    world = None
+    entity_handler = None
+        
     def __init__(self, entity_id):
         self.entity_id = entity_id
-        self.message_in = []
-        self.message_out = []
-        self.controllers = {}
-        self.world = None
-        self.entity_handler = None
 
     def receive_message(self, message):
         self.message_in.append(message)
